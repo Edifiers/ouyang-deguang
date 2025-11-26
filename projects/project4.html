@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>基于MID360雷达的自主路径规划导航机器人 - 欧阳德广作品集</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .project-detail {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .project-meta {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .project-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .project-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        .project-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        .project-content li {
+            margin: 0.5rem 0;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .btn-secondary {
+            background: #2c3e50;
+        }
+        .btn-secondary:hover {
+            background: #34495e;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>欧阳德广作品集</h1>
+            <ul>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#portfolio">作品展示</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-detail">
+        <a href="../index.html#portfolio" class="back-link">← 返回作品集</a>
+        
+        <div class="project-header">
+            <h1>基于MID360雷达的自主路径规划导航机器人</h1>
+            <p class="project-meta">MID360激光雷达SLAM建图 | 自主导航避障 | 路径规划</p>
+        </div>
+
+        <div class="image-grid">
+            <img src="../images/project4-1.jpg" alt="自主导航机器人整体">
+            <img src="../images/project4-2.png" alt="导航系统界面">
+            <img src="../images/project4-3.png" alt="SLAM建图效果">
+            <img src="../images/project4-4.png" alt="路径规划演示">
+        </div>
+        <p class="image-tip">💡 单击图片查看完整图片</p>
+
+        <div class="project-content">
+            <h2>项目简介</h2>
+            <p>基于MID360激光雷达的自主导航机器人，具备高精度环境感知与动态路径规划能力，适用于室内复杂场景下的全自主移动与避障任务。</p>
+
+            <h2>我的职责</h2>
+            <p>作为项目负责人，本人全面负责机器人的系统架构设计与核心算法开发。</p>
+
+            <h2>技术栈</h2>
+            <ul>
+                <li>操作系统：Linux + ROS机器人操作系统</li>
+                <li>SLAM算法：FAST-LIO位姿估计与建图</li>
+                <li>路径规划：A*全局规划、TEB/DWA局部规划</li>
+                <li>底盘控制：麦克纳姆轮全向底盘控制系统</li>
+                <li>传感器：MID360激光雷达</li>
+            </ul>
+
+            <h2>核心技术实现</h2>
+            <ul>
+                <li><strong>环境感知系统：</strong>于Linux/ROS环境下部署MID360雷达，采用FAST-LIO算法实现机器人位姿估计与SLAM建图，为导航系统提供厘米级精度定位与环境模型</li>
+                <li><strong>全局路径规划：</strong>基于ROS MoveBase框架集成A*全局规划算法，实现最优路径搜索</li>
+                <li><strong>局部动态避障：</strong>集成TEB、DWA局部规划算法，使机器人能够在动态障碍物环境中实时规划平滑轨迹并安全避障</li>
+                <li><strong>底盘控制系统：</strong>设计并实现了基于速度指令解析的麦克纳姆轮全向底盘控制系统，确保机器人能够精准执行上层下发的导航与避障指令</li>
+            </ul>
+
+            <h2>项目亮点</h2>
+            <p>该项目实现了从感知到决策再到执行的完整自主导航系统。通过FAST-LIO算法提供高精度定位，结合多层次路径规划策略，机器人能够在复杂动态环境中稳定、安全地完成导航任务。</p>
+
+            <h2>技术难点与解决方案</h2>
+            <p>在动态障碍物环境中，传统路径规划算法容易出现震荡或卡死。通过融合TEB与DWA算法，并优化参数配置，实现了平滑、稳定的动态避障效果。同时，麦克纳姆轮底盘的全向移动特性为复杂环境下的灵活避障提供了硬件基础。</p>
+
+            <h2>项目成果</h2>
+            <p>通过上述技术集成与系统调试，机器人成功实现了在复杂室内环境中的稳定、精准自主导航，各项性能指标均达到或超过项目预期。此项目获得深圳技术大学"优秀项目"称号。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 欧阳德广作品集. 保留所有权利。</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

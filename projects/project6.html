@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>遥操作手环 - 欧阳德广作品集</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .project-detail {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .project-meta {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .project-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .project-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        .project-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        .project-content li {
+            margin: 0.5rem 0;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .btn-secondary {
+            background: #2c3e50;
+        }
+        .btn-secondary:hover {
+            background: #34495e;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>欧阳德广作品集</h1>
+            <ul>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#portfolio">作品展示</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-detail">
+        <a href="../index.html#portfolio" class="back-link">← 返回作品集</a>
+        
+        <div class="project-header">
+            <h1>遥操作手环</h1>
+            <p class="project-meta">姿态控制 | LoRa无线通信 | 人机交互</p>
+        </div>
+
+        <div class="image-grid">
+            <img src="../images/project6-1.jpg" alt="遥操作手环整体">
+            <img src="../images/project6-2.jpg" alt="遥操作手环细节">
+        </div>
+        <p class="image-tip">💡 单击图片查看完整图片</p>
+
+        <div class="project-content">
+            <h2>项目简介</h2>
+            <p>基于柔性夹爪结构的遥操作手环，采用全3D打印件制造，通过卡扣式设计实现便捷佩戴。手环内置可充电电池、陀螺仪及LoRa无线发送模块，接收端通过串口通讯即可实时获取姿态数据，可用于远程操控Robocon竞赛车辆。该系统在深圳技术大学科创嘉年华中进行展示，成功吸引300余名同学现场报名，有效促进了团队招新工作。</p>
+
+            <h2>技术栈</h2>
+            <ul>
+                <li>硬件设计：3D打印结构设计、柔性夹爪机构</li>
+                <li>传感器：MPU6050陀螺仪传感器</li>
+                <li>无线通信：LoRa远距离无线通信模块</li>
+                <li>通信协议：串口通信协议设计与解析</li>
+                <li>电源管理：可充电电池系统</li>
+            </ul>
+
+            <h2>硬件设计</h2>
+            <ul>
+                <li><strong>创新结构设计：</strong>创新性地采用类柔性夹爪结构，实现无额外传动机构的轻量化设计</li>
+                <li><strong>便捷佩戴方案：</strong>通过卡扣式固定方案确保佩戴稳定性，方便快速穿戴</li>
+                <li><strong>3D打印制造：</strong>全3D打印件制造，降低成本并支持快速迭代</li>
+                <li><strong>集成化设计：</strong>将电池、传感器、通信模块集成在紧凑的手环结构中</li>
+            </ul>
+
+            <h2>电子系统开发</h2>
+            <ul>
+                <li><strong>姿态数据采集：</strong>集成MPU6050陀螺仪传感器，实时采集手部姿态数据</li>
+                <li><strong>LoRa无线通信：</strong>采用LoRa无线通信模块，实现远距离、低功耗的数据传输</li>
+                <li><strong>低功耗设计：</strong>构建低功耗的数据采集与传输系统，延长续航时间</li>
+                <li><strong>可充电电源：</strong>内置可充电电池，支持反复使用</li>
+            </ul>
+
+            <h2>软件系统开发</h2>
+            <ul>
+                <li><strong>串口通信协议：</strong>开发了基于串口通信的协议解析程序，实现姿态数据的实时解码</li>
+                <li><strong>数据可视化：</strong>实现姿态数据的实时可视化显示</li>
+                <li><strong>多设备兼容：</strong>支持控制不同类型的机器人设备</li>
+            </ul>
+
+            <h2>项目亮点</h2>
+            <p>该项目将硬件设计、电子系统与软件开发完美结合，实现了一个完整的人机交互系统。通过手部姿态控制机器人，提供了直观、自然的操控体验。柔性夹爪结构的创新设计简化了机械结构，降低了成本和重量。</p>
+
+            <h2>应用场景</h2>
+            <p>该系统最终实现了通过手部姿态远程控制不同机器人设备的功能，可应用于：</p>
+            <ul>
+                <li>ROBOCON竞赛车辆的遥操作控制</li>
+                <li>机器人演示与展示</li>
+                <li>教学与科普活动</li>
+                <li>人机交互研究</li>
+            </ul>
+
+            <h2>项目成果</h2>
+            <p>在深圳技术大学科创嘉年华现场演示中，系统展现出良好的人机交互实时性与稳定性，成功吸引300余名同学现场报名，有效促进了团队招新工作。该项目充分展示了从概念设计到产品实现的完整开发能力。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 欧阳德广作品集. 保留所有权利。</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

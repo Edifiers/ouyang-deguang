@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBOCON自动取箭射箭机器人 - 欧阳德广作品集</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .project-detail {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .project-meta {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .project-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .project-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        .project-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        .project-content li {
+            margin: 0.5rem 0;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .btn-secondary {
+            background: #2c3e50;
+        }
+        .btn-secondary:hover {
+            background: #34495e;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>欧阳德广作品集</h1>
+            <ul>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#portfolio">作品展示</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-detail">
+        <a href="../index.html#portfolio" class="back-link">← 返回作品集</a>
+        
+        <div class="project-header">
+            <h1>ROBOCON自动取箭射箭机器人</h1>
+            <p class="project-meta">自动整车控制系统 | 自适应精准打击</p>
+        </div>
+
+        <div class="image-grid">
+            <img src="../images/project3-1.jpg" alt="取箭射箭机器人整体">
+            <img src="../images/project3-2.jpg" alt="取箭射箭机器人发射">
+        </div>
+        <p class="image-tip">💡 单击图片查看完整图片</p>
+
+        <div class="project-content">
+            <h2>项目简介</h2>
+            <p>取箭射箭机器人，用于复刻全国大学生机器人大赛ROBOCON"投壶行觞"赛题。此机器人具备滑轨多夹爪连续取箭、机械臂协同送箭、以及摩擦轮高速精准发射的能力。该项目在功能与精度上全面达到赛题要求，圆满实现了预期目标。</p>
+
+            <h2>我的职责</h2>
+            <p>在该项目中，本人作为电控负责人，独立完成了整车控制系统的软件开发工作。</p>
+
+            <h2>技术栈</h2>
+            <ul>
+                <li>控制系统：整车驱动与执行机构协同控制</li>
+                <li>机械结构：滑轨多夹爪储箭机构、机械臂协同系统</li>
+                <li>发射系统：摩擦轮高速发射、气缸稳固机构</li>
+                <li>传感器：激光测距模块</li>
+                <li>控制算法：轨迹计算、自适应速度控制</li>
+            </ul>
+
+            <h2>系统功能实现</h2>
+            <ul>
+                <li><strong>连续取箭系统：</strong>机器人集成了滑轨多夹爪储箭机构与机械臂协同作业系统，能够一次性抓取多支箭矢</li>
+                <li><strong>移动中发射：</strong>在移动中实现连续发射，提高作业效率</li>
+                <li><strong>稳固发射机构：</strong>通过气缸结构稳固箭体，并由电机驱动摩擦轮发射弓箭</li>
+                <li><strong>全流程自动化：</strong>实现了高效、精准的取箭-射箭全流程自动化</li>
+            </ul>
+
+            <h2>控制系统开发</h2>
+            <p>在系统调试与算法层面，本人负责整车驱动与执行机构的控制：</p>
+            <ul>
+                <li><strong>多机构协同调度：</strong>包括摩擦轮、夹取电机及机械臂的协同调度，确保各机构按时序精准配合</li>
+                <li><strong>射箭轨迹模型：</strong>构建了射箭轨迹与落点控制模型，实现精确打击</li>
+                <li><strong>自适应速度控制：</strong>基于激光测距模块反馈的距离信息实时计算并自动调整摩擦轮转速</li>
+                <li><strong>多距离精准打击：</strong>实现了对不同距离目标的自适应精准打击</li>
+            </ul>
+
+            <h2>项目亮点</h2>
+            <p>该项目的核心亮点在于实现了取箭、送箭、发射的全流程自动化控制。通过激光测距反馈与轨迹计算模型，系统能够根据目标距离自动调整发射参数，实现自适应精准打击。多机构的协同控制确保了系统的高效稳定运行。</p>
+
+            <h2>技术难点与解决方案</h2>
+            <p>射箭精度受多种因素影响，包括发射速度、角度、箭体姿态等。通过建立精确的弹道模型，结合激光测距实时反馈，系统能够动态调整摩擦轮转速，补偿各种误差因素。气缸稳固机构确保了箭体在发射瞬间的姿态稳定性。</p>
+
+            <h2>项目成果</h2>
+            <p>该机器人系统稳定可靠，圆满完成了全流程取箭与射箭任务，在精度与自动化程度上均达到赛题要求的高性能指标。系统展现出优秀的多机构协同控制能力与自适应精准打击能力。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 欧阳德广作品集. 保留所有权利。</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

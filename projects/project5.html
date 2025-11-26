@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自动水下机器人+自动浮标 - 欧阳德广作品集</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .project-detail {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .project-meta {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .project-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .project-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        .project-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        .project-content li {
+            margin: 0.5rem 0;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .btn-secondary {
+            background: #2c3e50;
+        }
+        .btn-secondary:hover {
+            background: #34495e;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>欧阳德广作品集</h1>
+            <ul>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#portfolio">作品展示</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-detail">
+        <a href="../index.html#portfolio" class="back-link">← 返回作品集</a>
+        
+        <div class="project-header">
+            <h1>自动水下机器人+自动浮标</h1>
+            <p class="project-meta">自动视觉识别 | 姿态控制自主定深 | 无线数据传输</p>
+        </div>
+
+        <div class="image-grid">
+            <img src="../images/project5-1.jpg" alt="水下机器人整体">
+            <img src="../images/project5-2.jpg" alt="水下机器人测试">
+            <img src="../images/project5-3.jpg" alt="自动浮标系统">
+            <img src="../images/project5-4.png" alt="控制系统界面">
+        </div>
+        <p class="image-tip">💡 单击图片查看完整图片</p>
+
+        <div class="project-content">
+            <h2>项目简介</h2>
+            <p>AUV自主水下机器人，具备自主定深与智能视觉识别能力，可在复杂水下环境中完成稳定航行与目标识别任务；水下自动监测浮标，能够实现自主定深与数据实时回传，用于不同水深压力与温度数据的精准采集与可视化监测。两项研究成果共同参加中国机器人RoboCup大赛，荣获全国一等奖。</p>
+
+            <h2>技术栈</h2>
+            <ul>
+                <li>操作系统：ROS机器人操作系统</li>
+                <li>视觉识别：Yolov11深度学习模型</li>
+                <li>传感器：MS5837深度传感器、IMU惯性测量单元</li>
+                <li>控制系统：PID闭环控制、步进电机控制</li>
+                <li>仿真环境：Gazebo物理仿真</li>
+                <li>通信系统：无线数据传输</li>
+            </ul>
+
+            <h2>AUV自主水下机器人开发</h2>
+            <p>本人完成了机器人的"感知-决策-控制"全链路系统开发：</p>
+            <ul>
+                <li><strong>自动定深与自稳定：</strong>基于MS5837深度传感器与IMU的自动定深与自稳定控制算法，实现水下精确悬停</li>
+                <li><strong>水下视觉识别：</strong>基于Yolov11的水下视觉识别系统，能够在复杂水下环境中准确识别目标</li>
+                <li><strong>系统集成：</strong>通过ROS框架实现各模块高效通信，构建完整的自主控制系统</li>
+                <li><strong>仿真验证：</strong>利用Gazebo仿真环境进行算法验证，提高开发效率</li>
+            </ul>
+
+            <h2>水下自动监测浮标系统开发</h2>
+            <ul>
+                <li><strong>升降机构设计：</strong>设计了基于步进电机与丝杆结构的升降机构，实现精确的深度控制</li>
+                <li><strong>深度闭环控制：</strong>构建了深度传感器闭环控制系统，实现了浮标的自主定深与稳定悬停</li>
+                <li><strong>数据实时传输：</strong>实现浮标数据与岸上上位机的实时无线传输，支持远程监测</li>
+                <li><strong>多深度监测：</strong>可在不同水深采集压力与温度数据，实现精准的环境监测</li>
+            </ul>
+
+            <h2>项目亮点</h2>
+            <p>该项目实现了AUV机器人与监测浮标的协同工作，构建了完整的水下作业与监测系统。通过深度学习视觉识别技术与精确的深度控制算法，系统能够在复杂水下环境中稳定、可靠地完成各项任务。</p>
+
+            <h2>技术难点与解决方案</h2>
+            <p>水下环境的光照条件差、能见度低，对视觉识别提出了挑战。通过针对性的数据增强与模型训练，Yolov11模型在水下环境中仍能保持较高的识别准确率。同时，水下压力变化对深度控制的影响通过传感器融合与PID参数优化得到有效解决。</p>
+
+            <h2>项目成果</h2>
+            <p>通过两项技术的协同开发与优化，系统在比赛中展现出卓越的水下作业能力，最终以优异表现荣获全国一等奖，充分验证了水下机器人技术的先进性与可靠性。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 欧阳德广作品集. 保留所有权利。</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>

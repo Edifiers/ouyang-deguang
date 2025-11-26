@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBOCON R1夹苗射球仿农业机器人 - 欧阳德广作品集</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+        .project-detail {
+            max-width: 900px;
+            margin: 120px auto 60px;
+            padding: 0 20px;
+        }
+        .project-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .project-header h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+        .project-meta {
+            color: #666;
+            font-size: 1.1rem;
+        }
+        .project-image {
+            width: 100%;
+            border-radius: 8px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .project-content {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .project-content h2 {
+            color: #2c3e50;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        .project-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+        .project-content li {
+            margin: 0.5rem 0;
+        }
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 1.5rem;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #764ba2;
+        }
+        .btn-secondary {
+            background: #2c3e50;
+        }
+        .btn-secondary:hover {
+            background: #34495e;
+        }
+        .back-link {
+            display: inline-block;
+            margin-bottom: 2rem;
+            color: #667eea;
+            text-decoration: none;
+        }
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>欧阳德广作品集</h1>
+            <ul>
+                <li><a href="../index.html#about">关于我</a></li>
+                <li><a href="../index.html#portfolio">作品展示</a></li>
+                <li><a href="../index.html#contact">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="project-detail">
+        <a href="../index.html#portfolio" class="back-link">← 返回作品集</a>
+        
+        <div class="project-header">
+            <h1>ROBOCON R1夹苗射球仿农业机器人</h1>
+            <p class="project-meta">上位机路径规划 | 精准定位算法 | 平滑运动控制</p>
+        </div>
+
+        <div class="image-grid">
+            <img src="../images/project1-1.jpg" alt="ROBOCON R1机器人整体">
+            <img src="../images/project1-2.jpg" alt="ROBOCON R1机器人细节">
+        </div>
+        <p class="image-tip">💡 单击图片查看完整图片</p>
+
+        <div class="project-content">
+            <h2>项目简介</h2>
+            <p>夹苗射球机器人，用于参加全国大学生机器人大赛ROBOCON。此机器人具备双升降夹爪精准夹取稻苗、摩擦轮机构稳定发射球体以及全向舵轮底盘灵活移动的能力。该项目最终荣获全国一等奖。</p>
+
+            <h2>我的职责</h2>
+            <p>在该项目中，本人作为电控组核心成员，主要负责机器人的定位算法与运动控制系统开发。</p>
+
+            <h2>技术栈</h2>
+            <ul>
+                <li>嵌入式系统：FreeRTOS实时操作系统</li>
+                <li>传感器融合：OPS9编码器、DT35激光传感器</li>
+                <li>路径规划：Python + PLT库、β样条曲线优化</li>
+                <li>控制算法：PID控制、速度剖面生成</li>
+            </ul>
+
+            <h2>核心技术实现</h2>
+            <ul>
+                <li><strong>厘米级精确定位：</strong>通过融合OPS9编码器与DT35激光传感器数据，实现了厘米级精确定位，显著提升了舵轮底盘在高速运动中的控制柔顺性</li>
+                <li><strong>路径规划软件：</strong>基于Python与PLT库开发上位机路径规划软件，采用β样条曲线进行轨迹优化</li>
+                <li><strong>平滑速度控制：</strong>结合路径曲率与底盘加速度限制生成平滑速度剖面，确保机器人能够沿规划路径顺畅运动</li>
+                <li><strong>实时控制框架：</strong>在FreeRTOS实时系统上集成定位、底盘驱动与任务执行模块，构建高实时性的半自动控制框架</li>
+            </ul>
+
+            <h2>项目亮点</h2>
+            <p>通过多传感器融合定位技术与先进的路径规划算法，机器人在比赛中实现了稳定、精准的半自动运行。系统的高实时性与控制柔顺性确保了机器人能够在高速运动中保持精确定位，为任务执行提供了可靠保障。</p>
+
+            <h2>项目成果</h2>
+            <p>机器人在比赛中精准地完成了所有规定任务，在半自动运行环节获得满分，最终荣获全国一等奖。该项目充分验证了定位算法与运动控制系统的先进性与可靠性。</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 欧阳德广作品集. 保留所有权利。</p>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
