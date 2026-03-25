@@ -28,6 +28,29 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 });
 
+// 渐进式图片加载：缩略图模糊 → 原图清晰
+document.addEventListener('DOMContentLoaded', function() {
+    const lazyImages = document.querySelectorAll('img[data-src]');
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                const img = entry.target;
+                const fullSrc = img.getAttribute('data-src');
+                const fullImg = new Image();
+                fullImg.onload = function() {
+                    img.src = fullSrc;
+                    img.classList.add('loaded');
+                };
+                fullImg.src = fullSrc;
+                observer.unobserve(img);
+            }
+        });
+    }, { rootMargin: '200px' });
+
+    lazyImages.forEach(function(img) { observer.observe(img); });
+});
+
 // 图片灯箱功能
 document.addEventListener('DOMContentLoaded', function() {
     // 创建灯箱元素
@@ -45,7 +68,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 为所有图片网格中的图片添加点击事件
     document.querySelectorAll('.image-grid img').forEach(img => {
         img.addEventListener('click', function() {
-            lightboxImg.src = this.src;
+            lightboxImg.src = this.getAttribute('data-src') || this.src;
             lightboxImg.alt = this.alt;
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden'; // 禁止背景滚动
