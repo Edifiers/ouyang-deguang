@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c \"from PIL import Image; print\\(''Pillow OK''\\)\")",
+      "Bash(python generate_thumbs.py)",
+      "Bash(git config:*)",
+      "Bash(env)",
+      "Bash(python -c \":*)"
+    ]
+  }
+}
